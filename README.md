@@ -1,2 +1,31 @@
-# aws-scalable-web-app
-architecture tailored for your Scalable Web Application project, inspired by AWS best practices.
+# Scalable Web Application with ALB and Auto Scaling (AWS)
+
+## 📌 Project Overview
+[cite_start]This project demonstrates the deployment of a production-grade web application on AWS using EC2 instances inside a properly architected Virtual Private Cloud (VPC)[cite: 19]. [cite_start]The architecture ensures high availability and fault tolerance by distributing resources across two Availability Zones[cite: 19]. [cite_start]It leverages an Application Load Balancer (ALB), Auto Scaling Groups (ASG), and an Amazon RDS Multi-AZ database backend[cite: 20, 21].
+
+## 🏗️ Solution Architecture
+![Solution Architecture Diagram](./architecture/solution-architecture.png)
+*Briefly describe the flow of traffic from the user, through Route 53 and CloudFront, into the ALB, and down to the private EC2 compute and RDS data tiers.*
+
+## 🛠️ Key AWS Services Utilized
+* [cite_start]**Networking:** VPC (Public & Private subnets), NAT Gateway, Security Groups, NACLs[cite: 23].
+* [cite_start]**Compute:** EC2, Launch Templates, Auto Scaling Group (ASG) with target tracking[cite: 24].
+* [cite_start]**Load Balancing & Security:** Application Load Balancer (ALB), AWS WAF (OWASP Top 10 rules)[cite: 25].
+* [cite_start]**Database:** Amazon RDS Multi-AZ (MySQL/PostgreSQL) with automated failover[cite: 27].
+* [cite_start]**Edge & DNS:** CloudFront for caching, Route 53 for DNS resolution and health checks[cite: 26, 28].
+* [cite_start]**Operations:** Systems Manager (Session Manager) for bastion-free secure access, CloudWatch & SNS for monitoring[cite: 29, 30].
+
+## 🚀 Deployment Instructions
+*Detail the steps required to replicate your environment. If you used the Management Console, outline the phases. If you used IaC, provide the deployment commands.*
+1. Build the network foundation (VPC, Subnets, NAT Gateways).
+2. Establish the Security Groups and RDS Multi-AZ database.
+3. Create the EC2 Launch Template with the `user-data.sh` script.
+4. Deploy the ALB and attach the Auto Scaling Group.
+5. Configure CloudFront and Route 53 alias records.
+
+## 🎯 Learning Outcomes Achieved
+* [cite_start]Designed a secure VPC with appropriate subnetting, route tables, and NAT Gateway configurations[cite: 32].
+* [cite_start]Built a highly available, fault-tolerant architecture spanning multiple Availability Zones[cite: 33].
+* [cite_start]Implemented dynamic Auto Scaling based on target tracking policies[cite: 35].
+* [cite_start]Secured the application using AWS WAF, robust Security Groups, and private subnets[cite: 36].
+* [cite_start]Eliminated the need for public IPs and bastion hosts by utilizing Systems Manager Session Manager[cite: 37].
