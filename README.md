@@ -7,6 +7,23 @@ This project demonstrates the deployment of a production-grade web application o
 ![Solution Architecture Diagram](./architecture/solution-architecture.png)
 *Briefly describe the flow of traffic from the user, through Route 53 and CloudFront, into the ALB, and down to the private EC2 compute and RDS data tiers.*
 
+## 📂 Repository Directory Structure
+
+```text
+├── app/                      # Web application source code (e.g., HTML/PHP/Node.js files)
+│   ├── index.html            # Main application entry point
+│   └── assets/               # Static assets (images, CSS, JS) cached by CloudFront
+├── architecture/             # Visual representations of the project
+│   └── solution-diagram.png  # Exported Solution Architecture Diagram
+├── infrastructure/           # Infrastructure as Code (IaC) files (if applicable)
+│   ├── main.tf               # Primary Terraform configuration file (or CloudFormation template)
+│   ├── variables.tf          # Variable definitions
+│   └── outputs.tf            # Output values (e.g., ALB DNS name, CloudFront URL)
+├── scripts/                  # Bootstrapping and automation scripts
+│   └── userdata.sh           # Bash script for EC2 Launch Template (installs web server)
+└── README.md                 # Complete project documentation and instructions
+```
+
 ## 🛠️ Key AWS Services Utilized
 * **Networking:** VPC (Public & Private subnets), NAT Gateway, Security Groups, NACLs.
 * **Compute:** EC2, Launch Templates, Auto Scaling Group (ASG) with target tracking.
