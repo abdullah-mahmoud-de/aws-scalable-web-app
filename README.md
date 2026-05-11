@@ -16,3 +16,11 @@ Learners are expected to submit the following:
     - A live URL or a recorded video demonstrating the deployed solution on AWS (optional but encouraged).
 
 Here is a list of 8 project ideas that learners can use for their graduation project.
+
+
+---
+
+## 👨‍💻 Author
+
+**Abdullah Mahmoud**
+*Data Engineering & AWS Cloud Architecture*
